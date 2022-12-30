@@ -12,7 +12,6 @@ const Container = styled.div`
   background-color: ${baseTheme.colors.primary};
   height: 79px;
   width: 100%;
-  border: 1px solid #000;
 `
 const Nav = styled.div`
   display: flex;
@@ -23,7 +22,7 @@ const Item = styled.div`
   font-size: 20px;
   line-height: 24px;
   margin-right: 50px;
-  border-bottom: ${(props) => (props.isActive ? '2px solid #000000' : '')};
+  border-bottom: ${(props) => (props.isActive ? '2px solid #000000' : 'none')};
   font-weight: ${(props) => (props.isActive ? '700' : '400')};
   :first-child {
     margin-left: 50px;
@@ -67,7 +66,9 @@ export function Header() {
     <Container>
       <Nav>
         {navbar.map((item) => (
-          <Item isActive={item.isActive}>{item.title}</Item>
+          <Item key={item.title + new Date()} isActive={item.isActive}>
+            {item.title}
+          </Item>
         ))}
       </Nav>
       <Logo>
