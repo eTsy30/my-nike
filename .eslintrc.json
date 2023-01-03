@@ -26,7 +26,15 @@
     "import/prefer-default-export": "off",
     "import/no-anonymous-default-export": "off",
     "import/no-unresolved": "off",
-    "jsx-quotes": ["error", "prefer-single"],
+    // "jsx-quotes": ["error", "prefer-single"],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ],
     "no-console": "error",
     "no-extra-semi": "off",
     // "quotes": ["error", "single", "double", { "allowTemplateLiterals": true }],

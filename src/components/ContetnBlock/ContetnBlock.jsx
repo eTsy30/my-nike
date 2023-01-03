@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { PromoCard } from '../PromoCard/PromoCard'
 import { TopCarusel } from '../TopCarusel/TopCarusel'
+import { TabletContent } from '../TabletContent/TabletContent'
+import { Discount } from '../Discount/Discount'
 
 const Container = styled.div`
-  border: 1px solid #000;
   width: 1440px;
   margin-left: 50px;
   position: relative;
@@ -12,7 +13,11 @@ const Container = styled.div`
 `
 const PromoBoot = styled.div`
   display: flex;
-  border: 1px solid red;
+  height: 100%;
+
+  & > .mySwiper {
+    overflow-x: visible;
+  }
 `
 const Label = styled.div`
   display: flex;
@@ -48,6 +53,8 @@ export function ContetnBlock() {
         <p>Fight the heat in a sunny look!</p>
       </Label>
       <TopCarusel />
+      <TabletContent />
+      <Discount />
     </Container>
   )
 }

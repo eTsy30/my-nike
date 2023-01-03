@@ -5,6 +5,8 @@ import { GlobalStyle } from './GlobalStyle'
 import { LabelImg } from './components/LabelImg/LabelImg'
 import { PreViewLogo } from './components/PreViewLogo/PreViewLogo'
 import { ContetnBlock } from './components/ContetnBlock/ContetnBlock'
+import { PreFooter } from './components/PreFooter/PreFooter'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
   return (
@@ -13,8 +15,9 @@ function App() {
       <Header />
       <LabelImg />
       <PreViewLogo />
-
       <ContetnBlock />
+      <PreFooter />
+      <Footer />
     </>
   )
 }
