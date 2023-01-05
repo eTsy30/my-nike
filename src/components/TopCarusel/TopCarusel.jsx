@@ -16,13 +16,17 @@ import { TopCard } from './TopCard'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `
 const LabelContainer = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 33px;
+  padding: 0px 30px;
+  box-sizing: border-box;
   & > p {
     font-style: normal;
     font-weight: 700;
@@ -30,6 +34,16 @@ const LabelContainer = styled.div`
     line-height: 49px;
     color: #000000;
     margin: 0px;
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 0px;
+    p {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 `
 const ArrowContainer = styled.div`
@@ -40,15 +54,27 @@ const ArrowContainer = styled.div`
   rect:hover {
     fill: #c6c6c6;
   }
+  @media (max-width: 1000px) {
+    svg {
+      width: 25px;
+    }
+  }
 `
 const CardContainer = styled.div`
   display: flex;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  .swiper {
+    padding: 15px 0px;
+  }
+  @media (max-width: 1000px) {
+    padding: 0px;
+    box-sizing: border-box;
+    .swiper {
+      padding: 15px 0px;
+    }
+  }
 `
-// const Vbutton = styled.button`
-//   z-index: 100;
-//   border: 1px solid #000;
-//   cursor: grab;
-// `
 export function TopCarusel() {
   const swiperRef = useRef()
   return (
@@ -61,11 +87,10 @@ export function TopCarusel() {
         </ArrowContainer>
       </LabelContainer>
       <CardContainer>
-        {console.log(Navigation.extendParams)}
         <Swiper
           className="mySwiper"
-          slidesPerView={4}
-          spaceBetween={250}
+          slidesPerView={3}
+          spaceBetween={0}
           slidesPerGroup={1}
           loop
           loopFillGroupWithBlank

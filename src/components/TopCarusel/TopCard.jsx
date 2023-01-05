@@ -7,12 +7,13 @@ const Container = styled.div`
   background: #efefef;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
   border-radius: 18px;
-  width: 392.64px;
+  max-width: 392.64px;
+  width: 100%;
   height: 580px;
   margin-right: 55px;
   img {
+    width: 100%;
     position: relative;
-    width: 324px;
     z-index: 2;
     top: -218px;
     left: -20px;
@@ -37,8 +38,45 @@ const Container = styled.div`
   }
   svg {
     position: relative;
-    left: 210px;
-    top: -72px;
+    left: 222px;
+    top: -114px;
+    z-index: 2;
+  }
+  @media (max-width: 1000px) {
+    width: 167.9px;
+    height: 238px;
+    p {
+      font-family: 'Poppins';
+      font-style: italic;
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 120px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.1);
+      transform: matrix(0, 1, -1, 0, 0, 0);
+      position: absolute;
+      top: 30px;
+      left: 25px;
+    }
+    img {
+      position: relative;
+      top: 5px;
+      left: -5px;
+    }
+    svg {
+      position: relative;
+      left: 1px;
+      z-index: 3;
+      top: -9px;
+      width: 16%;
+    }
+  }
+  @media (max-width: 375px) {
+    width: 80%;
+    height: 137px;
+    margin: 20px;
   }
 `
 const Title = styled.h4`
@@ -51,6 +89,15 @@ const Title = styled.h4`
   color: #000000;
   position: relative;
   top: -120px;
+  @media (max-width: 1000px) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    position: relative;
+    top: 10px;
+    left: -20px;
+  }
 `
 const Price = styled.span`
   font-family: 'Work Sans';
@@ -62,6 +109,16 @@ const Price = styled.span`
   position: relative;
   top: -127px;
   margin-left: 37px;
+  @media (max-width: 1000px) {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    position: relative;
+    top: -35px;
+    left: -22px;
+    color: #000000;
+  }
 `
 
 export function TopCard() {

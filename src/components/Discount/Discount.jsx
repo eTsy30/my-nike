@@ -6,6 +6,9 @@ import GreenBoot from '../../assets/Img/nike-air-max-270-sunset-dq7625-600_w380-
 
 const Container = styled.div`
   margin-top: 100px;
+  @media (max-width: 1000px) {
+    margin-top: 10px;
+  }
 `
 const Label = styled.p`
   text-align: center;
@@ -14,10 +17,23 @@ const Label = styled.p`
   font-size: 40px;
   line-height: 49px;
   color: #000000;
+  @media (max-width: 1000px) {
+    font-style: italic;
+    font-weight: 7x00;
+    font-size: 13px;
+    line-height: 29px;
+
+    color: #000000;
+  }
 `
 const DiscountWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 export function Discount() {

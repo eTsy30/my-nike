@@ -11,6 +11,13 @@ const Label = styled.p`
   font-size: 40px;
   line-height: 49px;
   color: #000000;
+  margin-left: 50px;
+  @media (max-width: 1000px) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 20px;
+  }
 `
 const TableWrapper = styled.div`
   display: flex;
@@ -18,7 +25,6 @@ const TableWrapper = styled.div`
 `
 const Line = styled.div`
   display: flex;
-
   align-items: center;
   width: 100%;
   justify-content: space-around;
@@ -36,6 +42,25 @@ const Line = styled.div`
   & > img {
     width: 50%;
     height: 570px;
+  }
+  @media (max-width: 1000px) {
+    position: relative;
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+    & > div {
+      font-style: italic;
+      font-weight: 700;
+      font-size: 33px;
+      line-height: 49px;
+      letter-spacing: 0.3em;
+      color: #ffffff;
+      z-index: 2;
+      position: absolute;
+      text-align: center;
+      vertical-align: middle;
+    }
   }
 `
 

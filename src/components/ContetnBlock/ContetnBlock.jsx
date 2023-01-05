@@ -6,17 +6,21 @@ import { TabletContent } from '../TabletContent/TabletContent'
 import { Discount } from '../Discount/Discount'
 
 const Container = styled.div`
-  width: 1440px;
-  margin-left: 50px;
+  width: 100%;
   position: relative;
   top: -25px;
 `
 const PromoBoot = styled.div`
   display: flex;
   height: 100%;
-
   & > .mySwiper {
     overflow-x: visible;
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
 `
 const Label = styled.div`
@@ -38,6 +42,21 @@ const Label = styled.div`
     line-height: 98px;
     color: #000000;
     margin: 0px;
+  }
+  @media (max-width: 1000px) {
+    margin-top: 0px;
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    h4 {
+      font-style: italic;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+    }
   }
 `
 export function ContetnBlock() {

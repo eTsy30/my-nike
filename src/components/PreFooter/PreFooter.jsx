@@ -10,6 +10,14 @@ const Label = styled.p`
   line-height: 49px;
   text-transform: uppercase;
   color: #000000;
+  @media (max-width: 1000px) {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0px 0px 10px 20px;
+  }
 `
 const Contetn = styled.div`
   height: 324px;
@@ -37,6 +45,30 @@ const Contetn = styled.div`
   p {
     margin: 0;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 0px 20px 20px;
+    box-sizing: border-box;
+    h4 {
+      font-style: italic;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0px;
+      color: #ffffff;
+    }
+    span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #ffffff;
+    }
+  }
 `
 const Button = styled.button`
   width: 150px;
@@ -50,6 +82,12 @@ const Button = styled.button`
   color: #000000;
   border: none;
   margin-top: 25px;
+  @media (max-width: 1000px) {
+    width: 70px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 5px;
+  }
 `
 export function PreFooter() {
   return (
