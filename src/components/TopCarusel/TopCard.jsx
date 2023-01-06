@@ -73,7 +73,7 @@ const Container = styled.div`
       width: 16%;
     }
   }
-  @media (max-width: 375px) {
+  @media (max-width: 1000px) {
     width: 80%;
     height: 137px;
     margin: 20px;

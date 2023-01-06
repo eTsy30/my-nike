@@ -67,6 +67,9 @@ const CardContainer = styled.div`
   .swiper {
     padding: 15px 0px;
   }
+  .SwiperSlide {
+    margin-left: 20px;
+  }
   @media (max-width: 1000px) {
     padding: 0px;
     box-sizing: border-box;
@@ -102,7 +105,7 @@ export function TopCarusel() {
             swiperRef.current = swiper
           }}
         >
-          <SwiperSlide>
+          <SwiperSlide className="SwiperSlide">
             <TopCard />
           </SwiperSlide>
           <SwiperSlide>

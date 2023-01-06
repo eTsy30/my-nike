@@ -13,11 +13,6 @@ const Container = styled.div`
   border-radius: 18px;
   margin-left: 67px;
   @media (max-width: 1000px) {
-    max-width: 600px;
-    height: 272.39px;
-    margin: 40px;
-  }
-  @media (max-width: 375px) {
     width: 80%;
     height: 137px;
     margin: 20px;
@@ -57,13 +52,6 @@ const Label = styled.p`
     line-height: 15px;
     letter-spacing: 0.01em;
   }
-  @media (max-width: 375px) {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.01em;
-  }
 `
 const LeftSide = styled.div`
   display: flex;
@@ -77,6 +65,9 @@ const LeftSide = styled.div`
     margin: 15px;
     padding-right: 50px;
   }
+  @media (max-width: 1000px) {
+    margin-left: 20px;
+  }
 `
 const BootPicture = styled.img`
   position: relative;
@@ -84,14 +75,9 @@ const BootPicture = styled.img`
   left: 150px;
   @media (max-width: 1000px) {
     position: relative;
-    top: -380px;
-    left: 140px;
-  }
-  @media (max-width: 375px) {
     width: 80%;
-    position: relative;
-    top: -169px;
-    left: 100px;
+    top: -180px;
+    left: 99px;
   }
 `
 
